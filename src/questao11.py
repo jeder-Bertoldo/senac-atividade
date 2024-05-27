@@ -1,9 +1,10 @@
-custo_fabrica = float(input("Digite o custo de fábrica do carro: "))
-percentual_distribuidor = 0.28
-percentual_impostos = 0.45
+try:
+    custo_fabrica = float(input("Informe o custo de fábrica do carro: "))
 
-custo_distribuidor = custo_fabrica * percentual_distribuidor
-impostos = custo_fabrica * percentual_impostos
-custo_consumidor = custo_fabrica + custo_distribuidor + impostos
+    percentual_distribuidor = 0.28
+    impostos = 0.45
 
-print(f"O custo ao consumidor é: R$ {custo_consumidor:.2f}")
+    custo_consumidor = custo_fabrica + (custo_fabrica * percentual_distribuidor) + (custo_fabrica * impostos)
+    print(f"O custo ao consumidor do carro é de {custo_consumidor:.2f} reais.")
+except ValueError:
+    print("Por favor, insira um valor numérico válido.")

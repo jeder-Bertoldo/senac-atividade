@@ -1,9 +1,12 @@
-reais = float(input("Digite a quantia em reais: "))
-valor_dolar = float(input("Digite o valor de um dólar em reais: "))
-valor_euro = float(input("Digite o valor de um euro em reais: "))
+try:
+    real = float(input("Informe a quantia em reais: "))
+    taxa_dolar = float(input("Informe quantos reais vale um dólar: "))
+    taxa_euro = float(input("Informe quantos reais vale um euro: "))
 
-dolares = reais / valor_dolar
-euros = reais / valor_euro
+    dolares = real / taxa_dolar
+    euros = real / taxa_euro
 
-print(f"{reais} reais equivalem a {dolares:.2f} dólares.")
-print(f"{reais} reais equivalem a {euros:.2f} euros.")
+    print(f"{real} reais equivalem a {dolares:.2f} dólares e {euros:.2f} euros.")
+except ValueError:
+    print("Por favor, insira um valor numérico válido.")
+

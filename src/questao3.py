@@ -1,13 +1,11 @@
-#volume do cone
 import math
 
-raio = int(input("Digite o raio do cone: "))
-altura = int(input("Digite o raio do altura: "))
-
-pi = 3.14
-
-volume = (math.pi * raio **2)  * altura /3
-
-volume_aredondado = round(volume, 2)
-
-print("O volume do cone é ", volume_aredondado)
+try:
+    r = float(input("Informe o raio do cone: "))
+    h = float(input("Informe a altura do cone: "))
+    if r < 0 or h < 0:
+        raise ValueError("Raio e altura devem ser positivos.")
+    volume = (math.pi * r**2 * h) / 3
+    print("O volume do cone é", volume)
+except ValueError as e:
+    print("Erro:", e)

@@ -1,15 +1,15 @@
-salario = float(input("Digite o salário: "))
-cargo = int(input("Digite o código do cargo (101 - Gerente, 102 - Engenheiro, 103 - Técnico): "))
+try:
+    salario = float(input("Informe o salário do funcionário: "))
+    codigo = int(input("Informe o código do cargo: "))
 
-aumentos = {
-    101: 0.10,
-    102: 0.20,
-    103: 0.30
-}
+    aumentos = {101: 0.10, 102: 0.20, 103: 0.30}
+    aumento = aumentos.get(codigo, 0.40)
 
-percentual_aumento = aumentos.get(cargo, 0.40)
-novo_salario = salario * (1 + percentual_aumento)
+    novo_salario = salario * (1 + aumento)
+    diferenca = novo_salario - salario
 
-print(f"Salário antigo: R$ {salario:.2f}")
-print(f"Novo salário: R$ {novo_salario:.2f}")
-print(f"Diferença: R$ {novo_salario - salario:.2f}")
+    print(f"Salário antigo: {salario:.2f}")
+    print(f"Novo salário: {novo_salario:.2f}")
+    print(f"Diferença: {diferenca:.2f}")
+except ValueError:
+    print("Por favor, insira valores numéricos válidos.")
