@@ -1,0 +1,4 @@
+instale a biblioteca mysql.connector use o comando "pip install mysql-connector-python"
+
+Crie um banco de dados no laragon ou xampp o nome do banco pode ser "gerenciador_livros" como já esta setado no arquivo config.py 
+depois disso basta iniciar a aplicação usando o arquivo main.py
