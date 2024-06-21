@@ -1,5 +1,5 @@
-from config import get_db_connection
-from book import Book
+from database.config import get_db_connection
+from utils.book import Book
 import mysql.connector
 
 def create_table():

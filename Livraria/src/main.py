@@ -1,6 +1,6 @@
-from crud import create_table, add_book, get_books, update_book, delete_book
-from utils import validate_book_data
-from book import Book  # Adicione esta linha para verificar a importação
+from utils.crud import create_table, add_book, get_books, update_book, delete_book
+from utils.utils import validate_book_data
+from utils.book import Book  # Adicione esta linha para verificar a importação
 
 def main():
     create_table()
