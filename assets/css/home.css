@@ -22,7 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Ajuste para dar espaço ao formulário */
+    height: 30vh;/* Ajuste para dar espaço ao formulário */
+    margin-top: 5%; 
 }
 
 header {
@@ -41,7 +42,7 @@ header {
 }
 
 .logo img {
-width: 7% ;
+width: 5% ;
 background-color: rgba(222, 88, 88, 0.186);
 border-radius: 15px;
 }
@@ -105,6 +106,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .container-carrossel {
@@ -385,3 +387,4 @@ img {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
